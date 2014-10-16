@@ -1,13 +1,11 @@
 (function() {
-  (function() {
-    var pageLoader;
-    pageLoader.prototype = {
-      getScript: function() {},
-      init: function() {
-        return this.getConfig();
-      }
-    };
-    return pageLoader = {};
-  });
+  var pageLoader;
+
+  this.pageLoader = pageLoader = {
+    getScript: function() {},
+    init: function() {
+      return this.getConfig();
+    }
+  };
 
 }).call(this);

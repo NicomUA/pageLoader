@@ -1,6 +1,4 @@
-()->
-    pageLoader.prototype =
-        getScript: () ->
-        init: ()-> @getConfig();
-
-    pageLoader = {}
+@pageLoader = pageLoader =
+    getScript: () ->
+    init: ()-> @getConfig();
+    
