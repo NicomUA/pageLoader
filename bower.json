@@ -1,0 +1,28 @@
+{
+    "name": "pageLoader",
+    "version": "0.0.1",
+    "authors": [
+        "Nikita Matsapura <macaniki@gmail.com>"
+    ],
+    "description": "Lib for loading plugins and logics per page",
+    "main": "dist/pageLoader.js",
+    "moduleType": [
+        "amd",
+        "globals"
+    ],
+    "keywords": [
+        "page",
+        "load",
+        "require"
+    ],
+    "license": "MIT",
+    "homepage": "http://nicom.com.ua/",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
