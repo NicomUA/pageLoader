@@ -1,3 +1,3 @@
 pageLoader.page.init = function () {
-   $( "#datepicker" ).datepicker({ showButtonPanel: true });
+   alert('ok! index is loaded');
 }

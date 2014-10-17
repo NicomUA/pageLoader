@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>{{ title| default('pageLoader') }}</title>
+        <title>pageLoader angular init expample page</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
@@ -37,7 +37,22 @@
                 <!--/.nav-collapse -->
             </div>
         </div>
-        {% block body %}{% endblock %}
+        
+        <div class="container" >
+            <h1>pageLoader angular init expample page</h1>
+
+            
+            <div id="angular">
+                <div ng-controller="PhoneListCtrl">
+                    <pre> {{ phones | json }} </pre>
+                    <ul>
+                        <li ng-repeat="phone in phones"> {{ phone.name }} <p>{{ phone.snippet }}</p> </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
 
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="../dist/pageLoader.js" data-config="./js/config.js"></script>
