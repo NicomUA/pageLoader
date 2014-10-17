@@ -1,18 +1,19 @@
 {
-    "name": "pageLoader",
-    "version": "0.0.1",
-    "description": "Page JS libs loading per page",
-    "dependencies": {},
-    "devDependencies": {
-        "grunt": "^0.4.5",
-        "grunt-bump": "0.0.16",
-        "grunt-contrib-coffee": "^0.12.0",
-        "grunt-contrib-uglify": "^0.6.0"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": "https://bitbucket.org/NicomUA/pageloader.git",
-    "author": "Nikita Matsapura <macaniki@gmail.com>",
-    "license": "MIT"
+  "name": "pageLoader",
+  "version": "0.0.1",
+  "description": "Page JS libs loading per page",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.16",
+    "grunt-contrib-coffee": "^0.12.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "~0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://bitbucket.org/NicomUA/pageloader.git",
+  "author": "Nikita Matsapura <macaniki@gmail.com>",
+  "license": "MIT"
 }

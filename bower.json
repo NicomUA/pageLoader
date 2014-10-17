@@ -23,6 +23,6 @@
     "tests"
   ],
   "dependencies": {
-    "when": "~3.5.0"
+    "jquery": ">1.5"
   }
 }
