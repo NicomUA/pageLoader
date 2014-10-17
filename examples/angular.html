@@ -22,7 +22,8 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="./index.html">Home</a>
+                        <li><a href="./index.html">Home</a>
+                        <li><a href="./angular.html">Angular</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">jQuery <span class="caret"></span></a>
