@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>pageLoader datepicker init expample page</title>
+        <title>{{ title| default('pageLoader') }}</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
@@ -37,21 +37,7 @@
                 <!--/.nav-collapse -->
             </div>
         </div>
-        
-    <div class="container theme-showcase" role="main">
-        <div class="jumbotron">
-            <h1>pageLoader examples</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            </p>
-        </div>
-
-        <h2>pageLoad per page init example</h2>
-        <a href="./datepicker.html" class="btn btn-primary btn-lg">Datepicker example</a>
-        <a href="./accordion.html" class="btn btn-primary btn-lg">Accordion example</a>
-
-        <h2>pageLoader per page init + custom libs</h2>
-    </div>
-
+        {% block body %}{% endblock %}
 
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="../dist/pageLoader.js" data-config="./js/config.js"></script>
