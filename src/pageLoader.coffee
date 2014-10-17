@@ -67,14 +67,18 @@
             @log('no page to load');
             return false;
 
+        libs = []
+        if @globals.length
+            Array::push.apply libs, @globals
+
         if @page.require.length
+            Array::push.apply libs, @page.require
+
+        if libs.length
             @log('Loading required libs for page');
 
-            _ref = page.require;
-            for page in page.require
-                requeredLib = page;
-                libUrl = if (requeredLib.match('^(http|https|\/\/)','i')?) then requeredLib else (@libPath + requeredLib);
-
+            for lib in libs
+                libUrl = if (lib.match('^(http|https|\/\/)','i')?) then lib else (@libPath + lib);
                 callStack.push(@loadScript(libUrl));
 
         callStack.push(@loadScript(@pagePath + @page.module)) if @page.module?

@@ -57,7 +57,7 @@
       return lib;
     },
     bootstrap: function() {
-      var callStack, libUrl, page, requeredLib, _i, _len, _ref, _ref1, _this;
+      var callStack, lib, libUrl, libs, page, _i, _len, _this;
       callStack = [];
       _this = this;
       this.page = page = this.matchUrl();
@@ -65,14 +65,18 @@
         this.log('no page to load');
         return false;
       }
+      libs = [];
+      if (this.globals.length) {
+        Array.prototype.push.apply(libs, this.globals);
+      }
       if (this.page.require.length) {
+        Array.prototype.push.apply(libs, this.page.require);
+      }
+      if (libs.length) {
         this.log('Loading required libs for page');
-        _ref = page.require;
-        _ref1 = page.require;
-        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-          page = _ref1[_i];
-          requeredLib = page;
-          libUrl = (requeredLib.match('^(http|https|\/\/)', 'i') != null) ? requeredLib : this.libPath + requeredLib;
+        for (_i = 0, _len = libs.length; _i < _len; _i++) {
+          lib = libs[_i];
+          libUrl = (lib.match('^(http|https|\/\/)', 'i') != null) ? lib : this.libPath + lib;
           callStack.push(this.loadScript(libUrl));
         }
       }

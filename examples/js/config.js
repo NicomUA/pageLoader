@@ -1,12 +1,15 @@
 pageLoader.libPath = './js/';
 pageLoader.pagePath = './js/pages/';
-// pageLoader.debug = true;
+pageLoader.globals = ['https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'];
+pageLoader.debug = true;
 
 // pages configuration
 pageLoader.pages = {
     '/examples/index.html': {
         'module': 'index.js',
-        'require': ['https://code.jquery.com/ui/1.11.2/jquery-ui.min.js']
+        'require': [
+            'https://code.jquery.com/ui/1.11.2/jquery-ui.min.js'
+        ]
     },
     '/examples/accordion.html': {
         'module': 'accordion.js',
