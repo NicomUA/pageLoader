@@ -49,7 +49,7 @@
       _ref = this.pages;
       for (pattern in _ref) {
         libUrl = _ref[pattern];
-        if (this.location.match('^' + pattern, 'ig')) {
+        if (this.location.match(pattern, 'ig')) {
           lib = libUrl;
           break;
         }
@@ -57,7 +57,7 @@
       return lib;
     },
     bootstrap: function() {
-      var callStack, page, requeredLib, _i, _len, _ref, _ref1, _this;
+      var callStack, libUrl, page, requeredLib, _i, _len, _ref, _ref1, _this;
       callStack = [];
       _this = this;
       this.page = page = this.matchUrl();
@@ -72,15 +72,17 @@
         for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
           page = _ref1[_i];
           requeredLib = page;
-          callStack.push(this.loadScript(this.libPath + requeredLib));
+          libUrl = (requeredLib.match('^(http|https|\/\/)', 'i') != null) ? requeredLib : this.libPath + requeredLib;
+          callStack.push(this.loadScript(libUrl));
         }
       }
-      if (this.page.init != null) {
-        callStack.push(this.loadScript(this.pagePath + this.page.init));
+      if (this.page.module != null) {
+        callStack.push(this.loadScript(this.pagePath + this.page.module));
       }
       return $.when.apply($, callStack).done(function() {
         _this.log('all libs loaded');
-        if (_this.init == null) {
+        if (_this.page.init != null) {
+          _this.log('init %s page', _this.page.module);
           return _this.page.init();
         }
       });

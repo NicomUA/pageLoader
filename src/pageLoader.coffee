@@ -51,7 +51,7 @@
         _ref = @pages;
         for pattern of _ref
             libUrl = _ref[pattern];
-            if @location.match('^' + pattern, 'ig')
+            if @location.match(pattern, 'ig')
                 lib = libUrl;
                 break;
 
@@ -73,14 +73,19 @@
             _ref = page.require;
             for page in page.require
                 requeredLib = page;
-                callStack.push(@loadScript(@libPath + requeredLib));
+                libUrl = if (requeredLib.match('^(http|https|\/\/)','i')?) then requeredLib else (@libPath + requeredLib);
 
-        callStack.push(@loadScript(@pagePath + @page.init)) if @page.init?
+                callStack.push(@loadScript(libUrl));
+
+        callStack.push(@loadScript(@pagePath + @page.module)) if @page.module?
 
         $.when.apply($, callStack)
         .done ->
             _this.log('all libs loaded');
-            _this.page.init() if !_this.init?
+
+            if _this.page.init?
+                _this.log('init %s page', _this.page.module);
+                _this.page.init()
 
     init: ()->
         _this = @;
