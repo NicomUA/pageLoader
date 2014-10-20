@@ -16,14 +16,10 @@ pageLoader.pages = {
 
     '/examples/angular.html': {
         'module': 'angular.js',
-        'require': ['https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js']
+        'require': ['https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js','http://gregpike.net/demos/angular-local-storage/src/angular-local-storage.js']
     },
     '/examples/backbone.html': {
         'module': 'backbone.js',
-        'preLoad': [
-            'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js',
-            'http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js'
-        ],
         'require': [
             'http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.13/backbone.localStorage.js'
         ]

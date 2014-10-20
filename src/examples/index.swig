@@ -1,4 +1,5 @@
 {% extends "layout.swig" %}
+{% set active = 'home' %}
 
 {% block body %}
     <div class="container theme-showcase" role="main">
@@ -10,13 +11,13 @@
 
         <div class="row">
             <div class="col-md-4">
-                <a href="./jquery.html" class="btn btn-warning btn-lg btn-block">jQuery UI</a>
+                <a href="./jquery.html" class="btn btn-warning btn-lg btn-block">jQuery</a>
             </div>
             <div class="col-md-4">
-                <a href="./angular.html" class="btn btn-danger btn-lg btn-block">AngularJS</a>
+                <a href="./angular.html" class="btn btn-danger btn-lg btn-block">AngularJS (beta)</a>
             </div>
             <div class="col-md-4">
-                <a href="./backbone.html" class="btn btn-primary btn-lg btn-block">BackboneJS</a>
+                <a href="./backbone.html" class="btn btn-primary btn-lg btn-block">BackboneJS (beta)</a>
             </div>
 
         </div>

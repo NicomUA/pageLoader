@@ -29,7 +29,7 @@
         script = window.document.createElement('script');
         script.type = 'text/javascript';
         script.src = url;
-        script.async = true;
+        script.defer = true;
 
         # for old IE browsers
         script.onreadystatechange = ->

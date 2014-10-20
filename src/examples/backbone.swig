@@ -1,11 +1,20 @@
 {% extends "layout.swig" %}
 {% set title = 'pageLoader BackboneJS expample page' %}
+{% set active = 'backbone' %}
+
+{% block 'extra_js' %}
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js" defer></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js" defer></script>
+{% endblock %}
+
 {% block body %}
         <link rel="stylesheet" href="http://raw.githubusercontent.com/jeromegn/Backbone.localStorage/master/examples/todos/todos.css"/>
 
         <div class="container" >
             <h1>{{ title }}</h1>
+            <p> Backbone.JS is limited suported at this moment. </p>
 
+            {% raw %}
             <div id="todoapp">
 
                 <header>
@@ -46,5 +55,6 @@
 
                 <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
             </script>
+            {% endraw %}
         </div>
 {% endblock %}

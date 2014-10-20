@@ -5,6 +5,7 @@
         <title>pageLoader BackboneJS expample page</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     </head>
 
@@ -22,20 +23,23 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="./index.html">Home</a>
-                        <li><a href="./jquery.html">jQuery UI</a>
-                        <li><a href="./angular.html">Angular</a> </li>
+                        <li class=""><a href="./index.html">Home</a>
+                        <li class=""><a href="./jquery.html">jQuery UI</a>
+                        <li class="" ><a href="./angular.html">Angular</a> </li>
+                        <li class="active" ><a href="./backbone.html">Backbone</a> </li>
                     </ul>
                 </div>
-                <!--/.nav-collapse -->
             </div>
         </div>
+
         
         <link rel="stylesheet" href="http://raw.githubusercontent.com/jeromegn/Backbone.localStorage/master/examples/todos/todos.css"/>
 
         <div class="container" >
             <h1>pageLoader BackboneJS expample page</h1>
+            <p> Backbone.JS is limited suported at this moment. </p>
 
+            
             <div id="todoapp">
 
                 <header>
@@ -76,10 +80,16 @@
 
                 <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
             </script>
+            
         </div>
 
 
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="../dist/pageLoader.js" data-config="./js/config.js"></script>
+
+        
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js" defer></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js" defer></script>
+
     </body>
 </html>

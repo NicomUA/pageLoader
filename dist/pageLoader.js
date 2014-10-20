@@ -29,7 +29,7 @@
       script = window.document.createElement('script');
       script.type = 'text/javascript';
       script.src = url;
-      script.async = true;
+      script.defer = true;
       script.onreadystatechange = function() {
         if (script.readyState === 4 && script.status === 200) {
           pageLoader.log('load ' + url);

@@ -5,6 +5,7 @@
         <title>pageLoader BackboneJS expample page</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     </head>
 
@@ -22,14 +23,15 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="./index.html">Home</a>
-                        <li><a href="./jquery.html">jQuery UI</a>
-                        <li><a href="./angular.html">Angular</a> </li>
+                        <li class="active"><a href="./index.html">Home</a>
+                        <li class=""><a href="./jquery.html">jQuery UI</a>
+                        <li class="" ><a href="./angular.html">Angular</a> </li>
+                        <li class="" ><a href="./backbone.html">Backbone</a> </li>
                     </ul>
                 </div>
-                <!--/.nav-collapse -->
             </div>
         </div>
+
         
     <div class="container theme-showcase" role="main">
         <div class="jumbotron">
@@ -40,13 +42,13 @@
 
         <div class="row">
             <div class="col-md-4">
-                <a href="./jquery.html" class="btn btn-warning btn-lg btn-block">jQuery UI</a>
+                <a href="./jquery.html" class="btn btn-warning btn-lg btn-block">jQuery</a>
             </div>
             <div class="col-md-4">
-                <a href="./angular.html" class="btn btn-danger btn-lg btn-block">AngularJS</a>
+                <a href="./angular.html" class="btn btn-danger btn-lg btn-block">AngularJS (beta)</a>
             </div>
             <div class="col-md-4">
-                <a href="./backbone.html" class="btn btn-primary btn-lg btn-block">BackboneJS</a>
+                <a href="./backbone.html" class="btn btn-primary btn-lg btn-block">BackboneJS (beta)</a>
             </div>
 
         </div>
@@ -55,5 +57,7 @@
 
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="../dist/pageLoader.js" data-config="./js/config.js"></script>
+
+        
     </body>
 </html>

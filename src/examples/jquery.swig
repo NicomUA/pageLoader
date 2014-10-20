@@ -1,5 +1,7 @@
 {% extends "layout.swig" %}
 {% set title = 'pageLoader jQuery UI expample page' %}
+{% set active = 'jquery' %}
+
 {% block body %}
         <div class="container">
             <h1>{{ title }}</h1>

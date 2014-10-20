@@ -2,9 +2,10 @@
 <html>
 
     <head>
-        <title>pageLoader angular init expample page</title>
+        <title>pageLoader Angular.js ToDo List expample page</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     </head>
 
@@ -22,32 +23,48 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="./index.html">Home</a>
-                        <li><a href="./jquery.html">jQuery UI</a>
-                        <li><a href="./angular.html">Angular</a> </li>
+                        <li class=""><a href="./index.html">Home</a>
+                        <li class=""><a href="./jquery.html">jQuery UI</a>
+                        <li class="active" ><a href="./angular.html">Angular</a> </li>
+                        <li class="" ><a href="./backbone.html">Backbone</a> </li>
                     </ul>
                 </div>
-                <!--/.nav-collapse -->
             </div>
         </div>
+
         
         <div class="container" >
-            <h1>pageLoader angular init expample page</h1>
+            <h1>pageLoader Angular.js ToDo List expample page</h1>
 
-            
-            <div id="angular">
-                <div ng-controller="PhoneListCtrl">
-                    <pre> {{ phones | json }} </pre>
-                    <ul>
-                        <li ng-repeat="phone in phones"> {{ phone.name }} <p>{{ phone.snippet }}</p> </li>
-                    </ul>
-                </div>
+            <div id="angular" ng-controller="TodoCtrl">
+                
+                	<section class="app-body">
+                		<section class="archive-control">
+                			<span>{{ remaining() }} of {{ todos.length }} remaining</span>
+                			<p>[ <a href="" data-ng-click="archive()">Remove Completed Items</a> ]</p>
+                		</section>
+
+                		<ul class="unstyled angular">
+                			<li class="angular" data-ng-repeat="todo in todos track by $index">
+                				<input type="checkbox" data-ng-model="todo.done">
+                				<span class="done-{{ todo.done }}">{{ todo.text }}</span>
+                			</li>
+                		</ul>
+
+                		<form data-ng-submit="addTodo()" class="todo-form">
+                			<input type="text" data-ng-model="todoText" placeholder="Enter new ToDo item" class="angular"/>
+                			<br />
+                			<input type="submit" value="Add Task" class="angular"/>
+                		</form>
+                    </section>
+                
             </div>
-            
         </div>
 
 
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="../dist/pageLoader.js" data-config="./js/config.js"></script>
+
+        
     </body>
 </html>
