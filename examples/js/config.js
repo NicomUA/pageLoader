@@ -24,6 +24,12 @@ pageLoader.pages = {
             'http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.13/backbone.localStorage.js'
         ]
     },
+    '/examples/knockout.html': {
+        'module': 'knockout.js',
+        'require': [
+            'http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js'
+        ]
+    },
 
     '(.*)': {
         'module': null,

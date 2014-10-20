@@ -11,14 +11,12 @@
         <link rel="stylesheet" href="http://raw.githubusercontent.com/jeromegn/Backbone.localStorage/master/examples/todos/todos.css"/>
 
         <div class="container" >
-            <h1>{{ title }}</h1>
-            <p> Backbone.JS is limited suported at this moment. </p>
+            <h1 class="text-center">{{ title }}</h1>
 
             {% raw %}
             <div id="todoapp">
 
                 <header>
-                    <h1>Todos</h1>
                     <input id="new-todo" type="text" placeholder="What needs to be done?">
                 </header>
 

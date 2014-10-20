@@ -27,6 +27,7 @@
                         <li class="{% if active == 'jquery' %}active{% endif %}"><a href="./jquery.html">jQuery UI</a>
                         <li class="{% if active == 'angular' %}active{% endif %}" ><a href="./angular.html">Angular</a> </li>
                         <li class="{% if active == 'backbone' %}active{% endif %}" ><a href="./backbone.html">Backbone</a> </li>
+                        <li class="{% if active == 'knockout' %}active{% endif %}" ><a href="./knockout.html">Knockout</a> </li>
                     </ul>
                 </div>
             </div>

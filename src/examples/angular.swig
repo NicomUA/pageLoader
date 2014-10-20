@@ -4,7 +4,7 @@
 
 {% block body %}
         <div class="container" >
-            <h1>{{ title }}</h1>
+            <h1 class="text-center">{{ title }}</h1>
 
             <div id="angular" ng-controller="TodoCtrl">
                 {% raw %}

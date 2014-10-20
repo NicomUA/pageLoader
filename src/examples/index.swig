@@ -20,6 +20,10 @@
                 <a href="./backbone.html" class="btn btn-primary btn-lg btn-block">BackboneJS (beta)</a>
             </div>
 
+            <div class="col-md-4">
+                <a href="./knockout.html" class="btn btn-warning btn-lg btn-block" style="background-color: #CF5300;">Knockout</a>
+            </div>
+
         </div>
     </div>
 {% endblock %}
