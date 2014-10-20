@@ -23,16 +23,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="./index.html">Home</a>
-                        <li><a href="./angular.html">Angular</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">jQuery <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="./datepicker.html">Datepicker</a></li>
-                                <li><a href="./accordion.html">Accordion</a></li>
-
-                            </ul>
-                        </li>
+                        <li><a href="./jquery.html">jQuery UI</a>
+                        <li><a href="./angular.html">Angular</a> </li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->

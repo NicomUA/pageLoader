@@ -8,10 +8,17 @@
             </p>
         </div>
 
-        <h2>pageLoad per page init example</h2>
-        <a href="./datepicker.html" class="btn btn-primary btn-lg">Datepicker example</a>
-        <a href="./accordion.html" class="btn btn-primary btn-lg">Accordion example</a>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="./jquery.html" class="btn btn-warning btn-lg btn-block">jQuery UI</a>
+            </div>
+            <div class="col-md-4">
+                <a href="./angular.html" class="btn btn-danger btn-lg btn-block">AngularJS</a>
+            </div>
+            <div class="col-md-4">
+                <a href="./backbone.html" class="btn btn-primary btn-lg btn-block">BackboneJS</a>
+            </div>
 
-        <h2>pageLoader per page init + custom libs</h2>
+        </div>
     </div>
 {% endblock %}
