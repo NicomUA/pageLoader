@@ -3,7 +3,7 @@ module.exports = (grunt) ->
         pkg: grunt.file.readJSON('bower.json')
         uglify:
             dist:
-                files: ['dist/<%= pkg.name %>.min.js': 'dist/<%= pkg.name %>.js']
+                files: ['dist/pageLoader.min.js': 'dist/pageLoader.js']
 
         coffee:
             dist:
@@ -26,6 +26,7 @@ module.exports = (grunt) ->
             swig:
                 files: 'src/examples/*'
                 tasks: ['swig']
+
 
     grunt.loadNpmTasks 'grunt-contrib-uglify';
     grunt.loadNpmTasks 'grunt-contrib-coffee';

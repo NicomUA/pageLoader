@@ -35,7 +35,7 @@
 
         {% block body %}{% endblock %}
 
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="../libs/jquery/dist/jquery.min.js"></script>
         <script src="../dist/pageLoader.js" data-config="./js/config.js"></script>
 
         {% block 'extra_js' %}{% endblock %}
