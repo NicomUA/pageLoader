@@ -7,20 +7,22 @@
   "description": "Lib for loading plugins and logics per page",
   "main": "dist/pageLoader.js",
   "moduleType": [
-    "amd"
+    "globals"
   ],
   "keywords": [
-    "require",
-    "async"
+    "async",
+    "scripts",
+    "amd"
   ],
   "license": "MIT",
-  "homepage": "http://nicom.com.ua/",
+  "homepage": "http://code.nicom.com.ua/pageloader",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "./libs"
   ],
   "dependencies": {
     "jquery": ">1.5"
